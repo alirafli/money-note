@@ -1,11 +1,7 @@
+import Router from "./routers"
 
 function App() {
-
-  return (
-    <div className="App bg-blue-300">
-      test
-    </div>
-  )
+  return <Router />;
 }
 
-export default App
+export default App;
