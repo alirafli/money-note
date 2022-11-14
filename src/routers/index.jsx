@@ -4,11 +4,14 @@ import { HelmetProvider } from "react-helmet-async";
 import { UserWrapper } from "../context/UserContext";
 import { Navbar } from "../components";
 import ProtectedRoute from "./ProtectedRoute";
+import AuthRoute from "./AuthRoute";
+
+//pages
 import Login from "../pages/Login";
 import Homepage from "../pages/Homepage";
 import NotFound from "../pages/NotFound";
-import AuthRoute from "./AuthRoute";
 import Register from "../pages/Register";
+
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
