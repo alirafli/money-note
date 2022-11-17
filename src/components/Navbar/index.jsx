@@ -36,7 +36,7 @@ const Navbar = () => {
                 <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
                   <div className="flex-shrink-0 flex items-center">
                     <Link
-                      to="/"
+                      to="/informasi-keuangan"
                       className="font-semibold text-black text-xl md:text-2xl font-playfair_display"
                     >
                       MoneyNote

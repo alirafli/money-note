@@ -6,7 +6,7 @@ const AuthRoute = () => {
   const { isAuthenticated } = useUserContext();
 
   if (isAuthenticated) {
-    return <Navigate to="/" />;
+    return <Navigate to="/informasi-keuangan" />;
   }
 
   return <Outlet />;

@@ -1,5 +1,11 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+  useLocation,
+  Navigate,
+} from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { UserWrapper } from "../context/UserContext";
 import { Navbar } from "../components";
@@ -11,6 +17,11 @@ import Login from "../pages/Login";
 import Homepage from "../pages/Homepage";
 import NotFound from "../pages/NotFound";
 import Register from "../pages/Register";
+import Artikel from "../pages/Artikel";
+import TentangKami from "../pages/TentangKami";
+import Informasi from "../pages/Keuangan/Informasi";
+import Kalkulasi from "../pages/Keuangan/Kalkulasi";
+import Grafik from "../pages/Keuangan/Grafik";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -35,7 +46,13 @@ const Routers = () => {
             </Route>
             <Route element={<ProtectedRoute />}>
               <Route element={<Navbar />}>
-                <Route path="/" element={<Homepage />} />
+                <Route path="/" element={<Homepage />}>
+                  <Route path="informasi-keuangan" element={<Informasi />} />
+                  <Route path="grafik-keuangan" element={<Grafik />} />
+                  <Route path="kalkulasi-keuangan" element={<Kalkulasi />} />
+                </Route>
+                <Route path="/artikel" element={<Artikel />} />
+                <Route path="/tentang-kami" element={<TentangKami />} />
                 <Route path="*" element={<NotFound />} />
               </Route>
             </Route>
