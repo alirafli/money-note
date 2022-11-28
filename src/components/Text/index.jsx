@@ -6,6 +6,7 @@ const VARIANT = {
   h2: "text-xl md:text-2xl lg:text-3xl",
   p1: "text-base md:text-xl lg:text-2xl",
   p2: "text-sm md:text-base lg:text-xl",
+  p3: "text-xs md:text-sm lg:text-base",
 };
 
 const WEIGHT = {
