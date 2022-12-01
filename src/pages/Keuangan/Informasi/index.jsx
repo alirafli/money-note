@@ -3,8 +3,8 @@ import { Button, Card } from "../../../components";
 import { moneyData } from "./data";
 const Informasi = () => {
   return (
-    <div className="w-9/12 mx-auto">
-      <div className="grid grid-cols-3 gap-4">
+    <div className="w-fit mx-auto">
+      <div className="grid grid-cols-3 gap-14">
         {moneyData.map((data, key) => {
           return (
             <Card

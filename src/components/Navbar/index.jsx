@@ -4,7 +4,7 @@ import { MenuIcon, XIcon, UserCircleIcon } from "@heroicons/react/outline";
 import { Link, NavLink, Outlet } from "react-router-dom";
 
 const navigation = [
-  { name: "Dasboard", href: "/dashboard/informasi-keuangan" },
+  { name: "Dasboard", href: "/dashboard" },
   { name: "Artikel", href: "/artikel" },
   { name: "Tentang Kami", href: "/tentang-kami" },
 ];

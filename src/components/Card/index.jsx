@@ -4,8 +4,8 @@ import CurrencyFormat from "react-currency-format";
 
 const Card = ({ amount, infoLink, type }) => {
   return (
-    <div className="bg-gray-500 w-fit mx-auto">
-      <div className="flex pt-5 px-3">
+    <div className="bg-gray-300 w-fit mx-auto">
+      <div className="pt-6 px-4">
         <div className="mb-2 mr-2">
           <Text variant="p2" className="">
             <CurrencyFormat
@@ -17,10 +17,9 @@ const Card = ({ amount, infoLink, type }) => {
           </Text>
           <Text variant="p3">{type}</Text>
         </div>
-        <div>this is icon</div>
       </div>
       <div className="bg-blue-200 text-center py-1" to={infoLink}>
-        Info lainnya {">"}
+        <Text variant="p3"> Info lainnya {">"}</Text>
       </div>
     </div>
   );
