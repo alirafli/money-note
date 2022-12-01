@@ -13,7 +13,6 @@ const navigation = [
 ];
 
 const Homepage = () => {
-  console.log(window.location.pathname);
   return (
     <div className="pt-20">
       <nav className="mb-20 bg-gray-300 w-fit mx-auto p-5 rounded-full">

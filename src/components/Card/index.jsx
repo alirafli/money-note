@@ -1,6 +1,6 @@
 import React from "react";
 import Text from "../Text";
-import CurrencyFormat from "react-currency-format";
+import { NumericFormat } from "react-number-format";
 
 const Card = ({ amount, infoLink, type }) => {
   return (
@@ -8,12 +8,14 @@ const Card = ({ amount, infoLink, type }) => {
       <div className="pt-6 px-4">
         <div className="mb-2 mr-2">
           <Text variant="p2" className="">
-            <CurrencyFormat
+            Rp
+            <NumericFormat
+              displayType="text"
               value={amount}
-              displayType={"text"}
-              thousandSeparator={true}
-              prefix={"Rp "}
+              allowLeadingZeros
+              thousandSeparator=","
             />
+            ;
           </Text>
           <Text variant="p3">{type}</Text>
         </div>
