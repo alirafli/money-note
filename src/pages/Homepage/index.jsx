@@ -9,7 +9,7 @@ function classNames(...classes) {
 const navigation = [
   { name: "Informasi Keuangan", href: "informasi-keuangan" },
   { name: "grafik Keuangan", href: "grafik-keuangan" },
-  { name: "Kalkulasi Keuangan", href: "kalkulasi-keuangan" },
+  { name: "Rekap Keuangan", href: "rekap-keuangan" },
 ];
 
 const Homepage = () => {

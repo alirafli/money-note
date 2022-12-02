@@ -52,7 +52,7 @@ const Routers = () => {
                 <Route path="/dashboard" element={<Homepage />}>
                   <Route path="informasi-keuangan" element={<Informasi />} />
                   <Route path="grafik-keuangan" element={<Grafik />} />
-                  <Route path="kalkulasi-keuangan" element={<Kalkulasi />} />
+                  <Route path="rekap-keuangan" element={<Kalkulasi />} />
                 </Route>
                 <Route path="/artikel" element={<Artikel />} />
                 <Route path="/tentang-kami" element={<TentangKami />} />
