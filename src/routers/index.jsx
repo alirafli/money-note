@@ -46,6 +46,7 @@ const Routers = () => {
             </Route>
             <Route element={<ProtectedRoute />}>
               <Route element={<Navbar />}>
+                <Route exact path="/dashboard" element={<Navigate to="/dashboard/informasi-keuangan" replace />}/>
                 <Route path="/dashboard" element={<Homepage />}>
                   <Route path="informasi-keuangan" element={<Informasi />} />
                   <Route path="grafik-keuangan" element={<Grafik />} />
