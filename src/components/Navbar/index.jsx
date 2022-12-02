@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon, UserCircleIcon } from "@heroicons/react/outline";
 import { Link, NavLink, Outlet } from "react-router-dom";
+import { useUserContext } from "../../context/UserContext";
 
 const navigation = [
   { name: "Dasboard", href: "/dashboard" },
@@ -14,7 +15,10 @@ function classNames(...classes) {
 }
 
 const Navbar = () => {
-  const logout = () => {};
+  const { logout } = useUserContext();
+  const handleLogout = () => {
+    logout();
+  };
   return (
     <>
       <Disclosure as="nav" className="bg-white fixed w-full z-50 bg-opacity-75">
@@ -114,7 +118,7 @@ const Navbar = () => {
                           <Menu.Item>
                             {({ active }) => (
                               <button
-                                onClick={logout}
+                                onClick={handleLogout}
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm text-left text-gray-700 w-full"

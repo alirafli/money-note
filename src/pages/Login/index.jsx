@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Button, Input, Text } from "../../components";
 import { Link } from "react-router-dom";
+import { useUserContext } from "../../context/UserContext";
 
 const Login = () => {
   const [LoginData, setLoginData] = useState({ username: "", password: "" });
+  const { login } = useUserContext();
 
   const handleChange = (e) => {
     setLoginData({
@@ -15,6 +17,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(LoginData);
+    login('this is token');
   };
 
   return (

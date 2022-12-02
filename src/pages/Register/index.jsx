@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button, Input, Text } from "../../components";
+import { useUserContext } from "../../context/UserContext";
 
 const Register = () => {
   const [RegisterData, setRegisterData] = useState({
@@ -9,6 +10,7 @@ const Register = () => {
     tempatKerja: "",
     jmlKaryawan: "",
   });
+  const { login } = useUserContext();
 
   const handleChange = (e) => {
     setRegisterData({
@@ -19,7 +21,7 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(RegisterData);
+    login("this is token");
   };
 
   return (
